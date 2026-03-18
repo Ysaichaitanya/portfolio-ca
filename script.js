@@ -116,3 +116,25 @@ function closeCertModal() {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeCertModal();
 });
+
+/* ===== TRAINING CERTIFICATE UPLOAD ===== */
+let trainingCertDataUrl = null;
+
+function previewTrainingCert(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    trainingCertDataUrl = ev.target.result;
+    // Show the "View Certificate" button
+    const viewBtn = document.getElementById('training-cert-view-btn');
+    if (viewBtn) viewBtn.style.display = 'inline-flex';
+  };
+  reader.readAsDataURL(file);
+}
+
+function openTrainingCertModal() {
+  if (!trainingCertDataUrl) return;
+  openCertModal(trainingCertDataUrl, 'Summer Training Certificate — CSE Patashala');
+}
+

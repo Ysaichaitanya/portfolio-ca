@@ -16,7 +16,6 @@
 
 <body>
 
-  <!-- ===== NAV ===== -->
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#home" class="nav-logo">SC /&gt;</a>
@@ -356,7 +355,7 @@
   <section id="journey" class="section section-alt">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Experience & Learning</span>
+        <span class="section-tag">Experience &amp; Learning</span>
         <h2 class="section-title">My <span class="gradient-text">Journey</span></h2>
       </div>
 
@@ -382,6 +381,26 @@
               <li>Debugged and optimized C code using tools like GCC and GDB — resulting in a <strong>40% reduction in
                   runtime errors</strong>.</li>
             </ul>
+            <div class="tl-actions">
+              <label for="training-cert-upload" class="btn-view-cert" style="cursor:pointer;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="17 8 12 3 7 8" />
+                  <line x1="12" y1="3" x2="12" y2="15" />
+                </svg>
+                <a href="images/summer training certificate.png" target="_blank"> View </a>
+              </label>
+              <input type="file" id="training-cert-upload" accept="image/*" style="display:none;"
+                onchange="previewTrainingCert(this)" />
+              <button class="btn-view-cert" id="training-cert-view-btn" style="display:none;"
+                onclick="openTrainingCertModal()">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+
+              </button>
+            </div>
           </div>
         </div>
 
@@ -408,7 +427,7 @@
                       <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                       <circle cx="12" cy="12" r="3" />
                     </svg>
-                    View
+                    <a href="images/master infosis 2 (2).png" target="_blank"> View </a>
                   </button>
                 </div>
               </div>
@@ -425,7 +444,7 @@
                       <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                       <circle cx="12" cy="12" r="3" />
                     </svg>
-                    View
+                    <a href="images/image.png" target="_blank"> View </a>
                   </button>
                 </div>
               </div>
@@ -474,7 +493,7 @@
             </div>
             <h3>Bachelor of Technology</h3>
             <p class="tl-org">Lovely Professional University, Phagwara, Punjab</p>
-            <p style="color: var(--text-muted); margin-top: .5rem;">Computer Science &amp; Engineering | CGPA: 6.20</p>
+            <p style="color: var(--text-muted); margin-top: .5rem;">Computer Science &amp; Engineering | CGPA: 6.60</p>
           </div>
         </div>
 
@@ -509,6 +528,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="section">
